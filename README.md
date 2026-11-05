@@ -1,28 +1,55 @@
-# Explore Nepal
+# Explore Nepal 🇳🇵
 
-A front-end travel website showcasing Nepal through a browser-based experience.
+A responsive travel-inspiration site with searchable destinations, interest filters, favorite places, and a sample itinerary builder. Designed to be usable on **GitHub Pages** without a backend.
 
-## Project
+**[Visit the website](https://aashish-siingh.github.io/ExploreNepal/)**
 
-This repository contains the main HTML entry point plus additional assets. It demonstrates page layout, visual presentation, and building a themed web experience.
+## Features
 
-## Explore the code
+- Responsive, keyboard-accessible navigation and content
+- Search and category filtering for destination cards
+- Save/remove favorites in your browser (localStorage; no account)
+- Build a sample 3-, 5-, 7-, or 10-day itinerary by interest
+- Add selected destinations directly from destination cards
+- Travel preparation tips and improved mobile layout
+- Separate **Python recommendation CLI** showing scoring, data modeling and unit tests
 
-- [Main page](index.html)
-- [Project assets](ExploreNepal/)
+## Tech stack
 
-## Run
+- **Website:** semantic HTML, CSS, vanilla JavaScript
+- **Python:** standard-library data classes, scoring, command-line arguments and `unittest`
+- **Hosting:** static GitHub Pages
 
-Open `index.html` in a modern browser.
+## Run the website locally
 
-## Skills demonstrated
+Open `index.html` directly or start a local static server:
 
-- HTML structure and navigation
-- CSS design and page layout
-- JavaScript-enabled front-end experiences
+```bash
+python -m http.server 8000
+```
 
-## Ideas for the next iteration
+Then visit http://localhost:8000.
 
-Add a verified live demo, screenshots, accessibility checks, a mobile-device test, and an explanation of how destinations are selected.
+## Run the Python project
 
-[View other projects](https://github.com/aashish-siingh/myportfolio)
+```bash
+cd python
+python recommender.py --days 5 --interests nature relaxation
+python -m unittest discover -p "test_*.py"
+```
+
+The Python CLI is **not connected to the live GitHub Pages website** because GitHub Pages only serves static files. The front-end itinerary builder runs in JavaScript. Deploying a Python-backed recommendation API later would require an external hosting service.
+
+## Limitations and honest scope
+
+Explore Nepal is a personal portfolio and travel inspiration project, **not a travel agency**. No bookings or payments are processed. Itinerary suggestions are illustrative; they are not verified travel routes, pricing, or real-time availability. Mountain transfers and altitude considerations may require many additional days. The Python minimum-days rule is a demonstration heuristic, not professional travel advice.
+
+## Suggested future enhancements
+
+- More destinations with independently verified photos and geographic information
+- Travel-time-aware routing and realistic multi-day itinerary planning
+- Accessible maps and multilingual support
+- Offline destination content and browser tests
+- Deployable Python FastAPI backend with caching and tests
+
+Built as a portfolio project to practice UI design and practical programming.
